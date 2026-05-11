@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Detail - CASE-014</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3c475a",
+                    "tertiary": "#1e1200",
+                    "surface-bright": "#fbf8fa",
+                    "background": "#fbf8fa",
+                    "inverse-on-surface": "#f3f0f2",
+                    "on-secondary-fixed": "#0b1c30",
+                    "secondary-fixed": "#d3e4fe",
+                    "on-error": "#ffffff",
+                    "secondary": "#505f76",
+                    "on-surface-variant": "#45474c",
+                    "primary-fixed": "#d8e3fb",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e4e2e3",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#1b1b1d",
+                    "inverse-surface": "#303032",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e4e2e3",
+                    "on-primary-container": "#8590a6",
+                    "secondary-container": "#d0e1fb",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#eae7e9",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "surface-container-low": "#f5f3f4",
+                    "surface": "#fbf8fa",
+                    "primary-fixed-dim": "#bcc7de",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "tertiary-fixed-dim": "#ddc39d",
+                    "outline": "#75777d",
+                    "on-tertiary-container": "#a38c6a",
+                    "primary-container": "#1e293b",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#54647a",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#bcc7de",
+                    "surface-container": "#f0edef",
+                    "on-primary-fixed": "#111c2d",
+                    "tertiary-fixed": "#fadfb8",
+                    "primary": "#091426",
+                    "surface-tint": "#545f73",
+                    "surface-dim": "#dcd9db",
+                    "on-tertiary-fixed": "#271902",
+                    "tertiary-container": "#35260c",
+                    "outline-variant": "#c5c6cd",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1b1b1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "4px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "gutter": "16px",
+                    "xl": "32px",
+                    "container-max": "1440px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "mono-data": [
+                            "JetBrains Mono"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "display": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "mono-data": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display": [
+                            "36px",
+                            {
+                                    "lineHeight": "44px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased min-h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[240px] bg-surface dark:bg-background border-r border-outline-variant dark:border-outline flex flex-col p-md z-40 hidden md:flex transition-colors duration-200 ease-in-out">
+<div class="flex items-center gap-sm mb-xl px-sm">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed truncate">ShelterOps Gemma</h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant truncate">Local-First Coordination</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container rounded py-sm px-md mb-lg font-body-sm text-body-sm font-medium hover:bg-surface-tint hover:text-on-primary transition-colors flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Intake
+        </button>
+<div class="flex-1 flex flex-col gap-xs overflow-y-auto">
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span class="font-body-lg text-body-sm">Intake</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded text-primary dark:text-primary-fixed font-bold border-r-4 border-primary dark:border-primary-fixed bg-surface-container-low dark:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+<span class="font-body-lg text-body-sm">Cases</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="font-body-lg text-body-sm">Inventory</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span class="font-body-lg text-body-sm">Needs Board</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span class="font-body-lg text-body-sm">Public View</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+<span class="font-body-lg text-body-sm">Exports</span>
+</a>
+</div>
+<div class="mt-auto pt-md border-t border-outline-variant dark:border-outline">
+<a class="flex items-center gap-md px-md py-sm rounded text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-body-lg text-body-sm">Settings</span>
+</a>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface dark:bg-background border-b border-outline-variant dark:border-outline transition-all duration-150 flex justify-between items-center w-full px-lg py-md md:ml-[240px] md:max-w-[calc(100%-240px)]">
+<div class="flex items-center gap-lg">
+<button class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low dark:hover:bg-surface-container-highest px-sm py-xs rounded transition-colors duration-150" href="#">Northside School Gym</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<button aria-label="sync" class="p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</button>
+<button aria-label="verified_user" class="p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</button>
+<button aria-label="security" class="p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</button>
+<button aria-label="dns" class="p-xs rounded-full hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]">dns</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant dark:bg-outline mx-xs hidden md:block"></div>
+<div class="hidden md:flex gap-sm">
+<button class="border border-outline text-on-surface-variant font-body-sm text-body-sm font-medium px-md py-sm rounded hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors">
+                    Load Demo Scenario
+                </button>
+<button class="bg-primary-container text-on-primary-container font-body-sm text-body-sm font-medium px-md py-sm rounded hover:bg-surface-tint hover:text-on-primary transition-colors">
+                    New Intake
+                </button>
+</div>
+<img alt="User Profile" class="w-8 h-8 rounded-full ml-sm object-cover border border-outline-variant" data-alt="A small, circular profile picture of a professional user, suitable for a corporate dashboard top navigation bar. Clean, modern lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC93YK5_Sd5slydUkcb1ZWYazIDSQC7PpGW7L5EhKDtYeMOeZIX63eO284FshpCvb1iQS8o3JSjZQv3NWeSt40IkHYCj1AWncJYDuMp3WlJCc9yUxk2Cew1LIIcvHMsFLDbHbQiCO3ktraPLslGO6o0QHiSFA2DWxtuCKIhl0PyUqD8E8H9R5qamuXgh7ObqEnIIR7EOPUT4-S-9ja82ho4TxvY01xBn7_D0LeUVLCPXgcMuwvRElp5yB5zuBoM_3WViBwsaukOhLMU"/>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pt-lg pb-xl px-md md:px-lg md:ml-[240px] max-w-container-max mx-auto flex flex-col gap-lg">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mb-md">
+<div>
+<div class="flex items-center gap-sm mb-xs">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span></a>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Cases / Intake Logs</span>
+</div>
+<h2 class="text-display font-display text-on-surface">Case CASE-014</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Generated shelter plan and action queue</p>
+</div>
+<div class="flex flex-wrap items-center gap-sm">
+<button class="flex items-center gap-xs px-md py-sm rounded border border-outline text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+                    Copy Handoff
+                </button>
+<button class="flex items-center gap-xs px-md py-sm rounded border border-outline text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Export Case
+                </button>
+<button class="flex items-center gap-xs px-md py-sm rounded bg-primary-container text-on-primary-container font-body-sm text-body-sm hover:bg-surface-tint hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                    Mark Resolved
+                </button>
+</div>
+</div>
+<!-- Top Row: Overview Cards (Bento style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Priority Card -->
+<div class="bg-surface-container-lowest border border-error-container rounded-lg p-lg flex flex-col relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h3 class="font-label-caps text-label-caps text-error">HIGH PRIORITY</h3>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface-variant bg-surface-container px-2 py-1 rounded">Score 72</span>
+</div>
+<div class="mt-auto">
+<p class="font-body-sm text-body-sm text-on-surface">Multiple critical vulnerabilities flagged during intake. Immediate medical and logistical attention required.</p>
+</div>
+</div>
+<!-- Household Summary -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-lg md:col-span-2">
+<div class="flex items-start justify-between mb-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-on-surface-variant">group</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Household Summary</h3>
+</div>
+<span class="bg-surface-container px-xs py-[2px] rounded text-label-caps font-label-caps text-on-surface-variant">Size: 5</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md mt-sm">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Incident</p>
+<p class="font-body-sm text-body-sm text-on-surface flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">flood</span> Flood</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Location</p>
+<p class="font-body-sm text-body-sm text-on-surface flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">location_on</span> Gym A</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Primary Lang</p>
+<p class="font-body-sm text-body-sm text-on-surface flex items-center gap-xs"><span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">translate</span> Arabic</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">Vulnerable</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container-high text-on-surface text-xs px-2 py-0.5 rounded font-medium">Infant</span>
+<span class="bg-surface-container-high text-on-surface text-xs px-2 py-0.5 rounded font-medium">Elderly</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Safety Card (Full Width) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-md flex items-center gap-md bg-[linear-gradient(to_right,rgba(216,227,251,0.2),transparent)]">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-lg text-body-sm font-semibold text-on-surface">Privacy Filter Active</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PII has been masked for shared views. Grounding source snippets verified against <code class="font-mono-data text-xs bg-surface-container px-1 py-0.5 rounded">shelter_protocol.md</code>.</p>
+</div>
+<button class="text-primary font-body-sm text-body-sm hover:underline">Manage Settings</button>
+</div>
+<!-- Main Content Area with Tabs -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col h-[600px]">
+<!-- Tabs -->
+<div class="border-b border-outline-variant bg-surface-bright flex overflow-x-auto hide-scrollbar">
+<button class="px-lg py-md border-b-2 border-primary text-primary font-body-sm text-body-sm font-semibold whitespace-nowrap">
+                    Action Queue
+                </button>
+<button class="px-lg py-md border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm whitespace-nowrap transition-colors">
+                    Supplies
+                </button>
+<button class="px-lg py-md border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm whitespace-nowrap transition-colors">
+                    Handoff
+                </button>
+<button class="px-lg py-md border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm whitespace-nowrap transition-colors">
+                    Translation
+                </button>
+<button class="px-lg py-md border-b-2 border-transparent text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm whitespace-nowrap transition-colors">
+                    Safety &amp; Grounding
+                </button>
+</div>
+<!-- Tab Content: Action Queue -->
+<div class="flex-1 overflow-auto p-0">
+<table class="w-full text-left border-collapse">
+<thead class="sticky top-0 bg-surface-bright border-b border-outline-variant z-10">
+<tr>
+<th class="py-sm px-lg font-label-caps text-label-caps text-on-surface-variant w-12"></th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-on-surface-variant">Task</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-on-surface-variant">Priority</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-on-surface-variant">Assignee</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Critical Row -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="py-md px-lg text-center">
+<input class="rounded border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-md px-lg font-medium text-on-surface">Refer grandmother to medical desk</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-error-container text-on-error-container text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Critical
+                                </span>
+</td>
+<td class="py-md px-lg text-on-surface-variant flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface-dim flex items-center justify-center text-xs">U</div>
+                                Unassigned
+                            </td>
+<td class="py-md px-lg text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+<!-- High Row -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="py-md px-lg text-center">
+<input class="rounded border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-md px-lg font-medium text-on-surface">Provide baby formula (Stage 1)</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> High
+                                </span>
+</td>
+<td class="py-md px-lg text-on-surface-variant flex items-center gap-sm">
+<img alt="Assignee" class="w-6 h-6 rounded-full object-cover" data-alt="Small profile picture of a logistics staff member." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRvSnMXr-Ai2Wp75kXVoEP0k9Pl6qtRO_xqpld0UrJg6lMgTFFIrDpazU5PYfSfGGE3zEPK3k6Gg4KWHKLPx3zuB6YK67yn9my1d4tCcNQ0B267nWxAG2Ivnhr0i8tHtRiE3cOfjr8_NRyg3sgxXV89CCZYUMxbUL6tueiMtH0VzRe2iuc80RPbqfWMYv5KzsctTyJEqo_HixWP_rzpmMA8hL-JEkB4a8oSChUr-xr9Kqd4D7Yvu9qtIYloCco0oBfLLRbGzL8EXID"/>
+                                Logistics Desk
+                            </td>
+<td class="py-md px-lg text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+<!-- Normal Row -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="py-md px-lg text-center">
+<input class="rounded border-outline text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+</td>
+<td class="py-md px-lg text-on-surface">Assign cots in family cluster block B</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Normal
+                                </span>
+</td>
+<td class="py-md px-lg text-on-surface-variant flex items-center gap-sm">
+<div class="w-6 h-6 rounded-full bg-surface-dim flex items-center justify-center text-xs">U</div>
+                                Unassigned
+                            </td>
+<td class="py-md px-lg text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">more_vert</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</body></html>

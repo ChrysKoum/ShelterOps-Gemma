@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Needs Board - ShelterOps Gemma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3c475a",
+                        "tertiary": "#1e1200",
+                        "surface-bright": "#fbf8fa",
+                        "background": "#fbf8fa",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-secondary-fixed": "#0b1c30",
+                        "secondary-fixed": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "secondary": "#505f76",
+                        "on-surface-variant": "#45474c",
+                        "primary-fixed": "#d8e3fb",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e4e2e3",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1b1d",
+                        "inverse-surface": "#303032",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e3",
+                        "on-primary-container": "#8590a6",
+                        "secondary-container": "#d0e1fb",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae7e9",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "surface-container-low": "#f5f3f4",
+                        "surface": "#fbf8fa",
+                        "primary-fixed-dim": "#bcc7de",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-fixed-dim": "#ddc39d",
+                        "outline": "#75777d",
+                        "on-tertiary-container": "#a38c6a",
+                        "primary-container": "#1e293b",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#bcc7de",
+                        "surface-container": "#f0edef",
+                        "on-primary-fixed": "#111c2d",
+                        "tertiary-fixed": "#fadfb8",
+                        "primary": "#091426",
+                        "surface-tint": "#545f73",
+                        "surface-dim": "#dcd9db",
+                        "on-tertiary-fixed": "#271902",
+                        "tertiary-container": "#35260c",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "gutter": "16px",
+                        "xl": "32px",
+                        "container-max": "1440px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "mono-data": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "mono-data": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-lg min-h-screen flex flex-col md:flex-row">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full p-md bg-surface border-r border-outline-variant fixed left-0 top-0 h-full w-[240px] z-40 transition-colors duration-200 ease-in-out">
+<div class="mb-lg px-md">
+<h1 class="text-headline-md font-headline-md font-bold text-primary">ShelterOps Gemma</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Local-First Coordination</p>
+</div>
+<button class="mb-xl w-full flex items-center justify-center gap-sm bg-primary-container text-on-primary bg-primary text-on-primary font-body-sm text-body-sm font-semibold py-sm px-md rounded-lg hover:bg-primary-fixed-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            New Intake
+        </button>
+<ul class="flex-1 flex flex-col gap-xs overflow-y-auto">
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+                    Intake
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+                    Cases
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                    Inventory
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-primary font-bold border-r-4 border-primary bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+                    Needs Board
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+                    Public View
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+                    Exports
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-md border-t border-outline-variant">
+<a class="flex items-center gap-md px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-[240px] min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-lg py-md bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50 transition-all duration-150">
+<div class="flex items-center gap-lg">
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[24px] text-primary">menu</span>
+</div>
+<h2 class="text-headline-md font-headline-md font-bold text-primary hidden md:block">ShelterOps Gemma</h2>
+<div class="hidden md:flex items-center gap-md ml-lg border-l border-outline-variant pl-lg">
+<a class="text-primary font-semibold font-body-sm text-body-sm" href="#">Northside School Gym</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button aria-label="sync" class="text-on-surface-variant hover:bg-surface-container-low p-xs rounded-full transition-colors duration-150">
+<span class="material-symbols-outlined">sync</span>
+</button>
+<button aria-label="verified_user" class="text-on-surface-variant hover:bg-surface-container-low p-xs rounded-full transition-colors duration-150">
+<span class="material-symbols-outlined">verified_user</span>
+</button>
+<button aria-label="security" class="text-on-surface-variant hover:bg-surface-container-low p-xs rounded-full transition-colors duration-150">
+<span class="material-symbols-outlined">security</span>
+</button>
+<button aria-label="dns" class="text-on-surface-variant hover:bg-surface-container-low p-xs rounded-full transition-colors duration-150">
+<span class="material-symbols-outlined">dns</span>
+</button>
+<button class="hidden lg:flex items-center gap-xs px-md py-sm rounded-lg border border-outline text-on-surface font-body-sm text-body-sm hover:bg-surface-container-low transition-colors">
+                    Load Demo Scenario
+                </button>
+<button class="hidden md:flex items-center gap-xs bg-primary text-on-primary px-md py-sm rounded-lg font-body-sm text-body-sm font-medium hover:bg-primary/90 transition-colors">
+                    New Intake
+                </button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden ml-sm">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A small, circular profile picture of a professional individual looking forward neutrally. The lighting is balanced and clean, fitting a modern minimalist interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaiKJIwirGCPxEu72TP3WbPq4K2vkBacHtvxnQC_uGlIghJRRVLRTLM-toS094vOKtv7Y0v8vniLGBoKX7FHWvmmcPZQYQ-xnYOpPggpYbw_OYluFNXeV_J0ale_zcIMjCt8OW3AJRA3Yffl8NalJfKw4x_gPtf3QZ-6In7DqCbreYuH14Lh2hbtAThYtkSGLHRjEwJKL_oR6EEgFPjw4AFLXW9M3WIRjyFPiME_lGsXlXPu5pRyRV2Mbu4tbL6glgT1pZ4c7jyySh"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 p-md md:p-lg lg:p-xl max-w-container-max mx-auto w-full flex flex-col gap-xl">
+<!-- Header Section -->
+<section>
+<h2 class="text-display font-display text-on-surface">Needs Board</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-sm max-w-2xl">Aggregate real shelter needs and generate privacy-safe external requests.</p>
+</section>
+<!-- Most Urgent Needs -->
+<section class="flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-lg font-headline-lg text-on-surface">Most Urgent Needs</h3>
+<a class="text-primary font-body-sm text-body-sm font-semibold flex items-center gap-xs hover:underline" href="#">
+                        View All
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Urgent Card 1 -->
+<div class="bg-surface-container-lowest border border-error rounded-xl p-lg flex flex-col gap-md hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-error text-[28px]">child_care</span>
+<h4 class="text-headline-md font-headline-md text-on-surface">Baby Formula</h4>
+</div>
+<span class="bg-error/10 text-error px-sm py-xs rounded-full font-label-caps text-label-caps">CRITICAL</span>
+</div>
+<div class="flex items-baseline gap-xs mt-auto">
+<span class="text-display font-display text-on-surface">45</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">units requested</span>
+</div>
+</div>
+<!-- Urgent Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-md hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">bed</span>
+<h4 class="text-headline-md font-headline-md text-on-surface">Blankets</h4>
+</div>
+<span class="bg-secondary/10 text-secondary px-sm py-xs rounded-full font-label-caps text-label-caps">HIGH</span>
+</div>
+<div class="flex items-baseline gap-xs mt-auto">
+<span class="text-display font-display text-on-surface">120</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">units requested</span>
+</div>
+</div>
+<!-- Urgent Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-md hover:bg-surface-container-low transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">translate</span>
+<h4 class="text-headline-md font-headline-md text-on-surface">Arabic Volunteers</h4>
+</div>
+<span class="bg-secondary/10 text-secondary px-sm py-xs rounded-full font-label-caps text-label-caps">HIGH</span>
+</div>
+<div class="flex items-baseline gap-xs mt-auto">
+<span class="text-display font-display text-on-surface">4</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">individuals</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

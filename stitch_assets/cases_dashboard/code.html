@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cases Dashboard - ShelterOps Gemma</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#3c475a",
+                      "tertiary": "#1e1200",
+                      "surface-bright": "#fbf8fa",
+                      "background": "#fbf8fa",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-fixed": "#0b1c30",
+                      "secondary-fixed": "#d3e4fe",
+                      "on-error": "#ffffff",
+                      "secondary": "#505f76",
+                      "on-surface-variant": "#45474c",
+                      "primary-fixed": "#d8e3fb",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e4e2e3",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#1b1b1d",
+                      "inverse-surface": "#303032",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e4e2e3",
+                      "on-primary-container": "#8590a6",
+                      "secondary-container": "#d0e1fb",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#eae7e9",
+                      "on-tertiary-fixed-variant": "#564427",
+                      "surface-container-low": "#f5f3f4",
+                      "surface": "#fbf8fa",
+                      "primary-fixed-dim": "#bcc7de",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "tertiary-fixed-dim": "#ddc39d",
+                      "outline": "#75777d",
+                      "on-tertiary-container": "#a38c6a",
+                      "primary-container": "#1e293b",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#54647a",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#bcc7de",
+                      "surface-container": "#f0edef",
+                      "on-primary-fixed": "#111c2d",
+                      "tertiary-fixed": "#fadfb8",
+                      "primary": "#091426",
+                      "surface-tint": "#545f73",
+                      "surface-dim": "#dcd9db",
+                      "on-tertiary-fixed": "#271902",
+                      "tertiary-container": "#35260c",
+                      "outline-variant": "#c5c6cd",
+                      "on-primary": "#ffffff",
+                      "on-background": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "4px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "xl": "32px",
+                      "container-max": "1440px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "mono-data": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "display": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "mono-data": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-lg min-h-screen flex flex-col md:flex-row">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full p-md bg-surface border-r border-outline-variant fixed left-0 top-0 h-full w-[240px] z-40 transition-colors duration-200 ease-in-out">
+<div class="mb-xl px-sm">
+<h1 class="text-headline-md font-headline-md font-bold text-primary">ShelterOps Gemma</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Local-First Coordination</p>
+</div>
+<div class="flex flex-col gap-sm flex-grow">
+<!-- Inactive -->
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+<span>Intake</span>
+</a>
+<!-- Active: Cases -->
+<a class="flex items-center gap-sm px-sm py-sm text-primary font-bold border-r-4 border-primary hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared" data-weight="fill">folder_shared</span>
+<span>Cases</span>
+</a>
+<!-- Inactive -->
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Inventory</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+<span>Needs Board</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span>Public View</span>
+</a>
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="ios_share">ios_share</span>
+<span>Exports</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-sm">
+<a class="flex items-center gap-sm px-sm py-sm rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 ease-in-out font-body-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<button class="bg-primary-container text-on-tertiary px-md py-sm rounded font-body-sm font-semibold hover:bg-opacity-90 transition-colors w-full mt-sm flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Intake
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<div class="flex-1 flex flex-col min-w-0 md:ml-[240px]">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-lg py-md bg-surface border-b border-outline-variant docked full-width top-0 sticky z-50 transition-all duration-150">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-primary md:hidden">ShelterOps Gemma</span>
+<nav class="hidden md:flex gap-md">
+<span class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                        Northside School Gym
+                    </span>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-sm text-on-surface-variant">
+<button class="p-xs hover:bg-surface-container-low rounded-full transition-colors" title="sync"><span class="material-symbols-outlined">sync</span></button>
+<button class="p-xs hover:bg-surface-container-low rounded-full transition-colors" title="verified_user"><span class="material-symbols-outlined">verified_user</span></button>
+<button class="p-xs hover:bg-surface-container-low rounded-full transition-colors" title="security"><span class="material-symbols-outlined">security</span></button>
+<button class="p-xs hover:bg-surface-container-low rounded-full transition-colors" title="dns"><span class="material-symbols-outlined">dns</span></button>
+</div>
+<button class="text-primary font-body-sm text-body-sm font-medium hover:bg-surface-container-low px-sm py-xs rounded transition-colors hidden sm:block">Load Demo Scenario</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<main class="flex-1 p-md md:p-lg lg:p-xl overflow-y-auto">
+<!-- Page Header -->
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Cases</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Monitor open shelter cases, urgency flags, and action status.</p>
+</div>
+<!-- Summary Cards Bento -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-md mb-xl">
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Open Cases</span>
+<span class="material-symbols-outlined text-outline text-[20px]">folder_open</span>
+</div>
+<span class="font-display text-display text-on-surface">18</span>
+</div>
+<div class="bg-error-container border border-error p-md rounded-lg flex flex-col justify-between hover:bg-opacity-80 transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-label-caps text-label-caps text-on-error-container">Critical</span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<span class="font-display text-display text-on-error-container">3</span>
+</div>
+<div class="bg-tertiary-fixed border border-tertiary-fixed-dim p-md rounded-lg flex flex-col justify-between hover:bg-opacity-80 transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-label-caps text-label-caps text-tertiary-container">High Priority</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">priority_high</span>
+</div>
+<span class="font-display text-display text-tertiary-container">7</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Medical Escalations</span>
+<span class="material-symbols-outlined text-outline text-[20px]">medical_services</span>
+</div>
+<span class="font-display text-display text-on-surface">4</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Translation Needs</span>
+<span class="material-symbols-outlined text-outline text-[20px]">translate</span>
+</div>
+<span class="font-display text-display text-on-surface">6</span>
+</div>
+</div>
+<!-- Main Split Layout -->
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- Cases Table Area -->
+<div class="flex-grow bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface">
+<h3 class="font-headline-md text-headline-md text-on-surface">Active Cases Roster</h3>
+<div class="flex gap-sm">
+<button class="p-xs hover:bg-surface-container-high rounded border border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">filter_list</span></button>
+<button class="p-xs hover:bg-surface-container-high rounded border border-outline-variant text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">search</span></button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Priority</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Case ID</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Zone</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Household</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Top Need</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Language</th>
+<th class="p-md font-label-caps text-label-caps text-on-surface-variant font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- CASE-013 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors bg-surface-bright">
+<td class="p-md">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-sm bg-error-container text-on-error-container font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">error</span> CRITICAL
+                                        </span>
+</td>
+<td class="p-md font-mono-data text-mono-data">CASE-013</td>
+<td class="p-md">Clinic Hall</td>
+<td class="p-md">1 person</td>
+<td class="p-md text-error font-medium">Medical assessment required</td>
+<td class="p-md text-on-surface-variant">English</td>
+<td class="p-md">
+<button class="text-primary hover:text-primary-container font-medium">Review</button>
+</td>
+</tr>
+<!-- CASE-014 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors bg-surface-bright">
+<td class="p-md">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-sm bg-tertiary-fixed text-tertiary-container font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> HIGH
+                                        </span>
+</td>
+<td class="p-md font-mono-data text-mono-data">CASE-014</td>
+<td class="p-md">Gym A</td>
+<td class="p-md">5 people</td>
+<td class="p-md">Medication + baby formula</td>
+<td class="p-md">Arabic <span class="material-symbols-outlined text-[14px] text-tertiary align-middle ml-xs" title="Translation Needed">translate</span></td>
+<td class="p-md">
+<button class="text-primary hover:text-primary-container font-medium">Review</button>
+</td>
+</tr>
+<!-- CASE-012 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors bg-surface-bright">
+<td class="p-md">
+<span class="inline-flex items-center gap-xs px-2 py-1 rounded-sm bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">schedule</span> MEDIUM
+                                        </span>
+</td>
+<td class="p-md font-mono-data text-mono-data">CASE-012</td>
+<td class="p-md">Gym B</td>
+<td class="p-md">3 people</td>
+<td class="p-md text-on-surface-variant">Blankets</td>
+<td class="p-md text-on-surface-variant">Spanish</td>
+<td class="p-md">
+<button class="text-primary hover:text-primary-container font-medium">Review</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right Sidebar: Operations Snapshot -->
+<aside class="w-full lg:w-[320px] shrink-0 flex flex-col gap-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-lg">
+<div class="flex items-center gap-sm mb-md pb-sm border-b border-outline-variant">
+<span class="material-symbols-outlined text-primary">donut_large</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Current Operations Snapshot</h3>
+</div>
+<div class="mb-lg">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-sm">Top Common Needs</h4>
+<ul class="flex flex-col gap-sm">
+<li class="flex justify-between items-center text-body-sm font-body-sm">
+<span>Blankets</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">42 requests</span>
+</li>
+<li class="flex justify-between items-center text-body-sm font-body-sm">
+<span>Baby formula</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">15 requests</span>
+</li>
+<li class="flex justify-between items-center text-body-sm font-body-sm">
+<span>Translation (Arabic)</span>
+<span class="font-mono-data text-mono-data text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded">6 requests</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-secondary text-on-secondary px-md py-sm rounded border border-outline-variant font-body-sm font-semibold hover:bg-opacity-90 transition-colors flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined text-[18px]">assignment</span>
+                            Open Needs Board
+                        </button>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</body></html>
