@@ -1,2 +1,9 @@
 guide.md
 stitch_assets
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+backend-server.*.log
+frontend-server.*.log
+__pycache__/
+.pytest_cache/

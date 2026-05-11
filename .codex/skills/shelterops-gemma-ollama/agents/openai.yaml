@@ -1,0 +1,4 @@
+interface:
+  display_name: "shelterops-gemma-ollama"
+  short_description: "ShelterOps Gemma project skill"
+  default_prompt: "Use this skill to advance the ShelterOps Gemma MVP according to guide.md."
